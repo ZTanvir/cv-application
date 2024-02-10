@@ -1,0 +1,8 @@
+.InputField{
+    display: flex;
+    flex-direction: column;
+}
+.InputField > input {
+    height: 1.5rem;
+    font-size: 1rem;
+}
