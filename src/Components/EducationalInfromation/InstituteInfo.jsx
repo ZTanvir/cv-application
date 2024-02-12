@@ -16,7 +16,7 @@ const InstituteInfo = () => {
           <button className={institudeStyle.cancelBtn}>Cancel</button>
         </div>
         <button className={institudeStyle.deleteBtn}>
-          <span></span>Delete
+          <span className="material-symbols-outlined">delete</span>Delete
         </button>
       </form>
     </section>
