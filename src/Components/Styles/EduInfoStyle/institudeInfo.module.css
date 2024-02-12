@@ -1,0 +1,38 @@
+.institudeInfo{
+}
+.institudeInfo > form {
+    display: flex;
+    flex-direction: column;
+    gap:0.25rem;
+}
+.institudeInfo button {
+    padding:0.25rem 1rem ;
+    color: black;
+    background-color: #ffffff;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+}
+.institudeInfo .saveBtn{
+    border: 2px solid #04AA6D;
+}
+.institudeInfo .saveBtn:hover{
+    background-color: #04AA6D;
+    color: white;
+}
+
+.institudeInfo .cancelBtn{
+    border: 2px solid #008CBA;
+}
+.institudeInfo .cancelBtn:hover{
+    background-color: #008CBA;
+    color: white;
+}
+
+.institudeInfo .deleteBtn{
+    border: 2px solid #f44336;
+}
+.institudeInfo .deleteBtn:hover{
+    background-color: #f44336;
+    color: white;
+}

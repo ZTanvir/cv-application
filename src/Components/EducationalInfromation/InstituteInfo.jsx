@@ -1,18 +1,23 @@
 import InputField from "../InputField";
+import institudeStyle from "../Styles/EduInfoStyle/institudeInfo.module.css";
 
 const InstituteInfo = () => {
   return (
-    <section className="institute-information">
+    <section className={institudeStyle.institudeInfo}>
       <form>
         <InputField lableName="School" inputType="text" />
         <InputField lableName="Degree" inputType="text" />
         <InputField lableName="Start Date" inputType="date" />
         <InputField lableName="End Date" inputType="date" />
-        <button>
+        <div className={institudeStyle.saveCancelBtn}>
+          <button className={institudeStyle.saveBtn} type="submit">
+            Save
+          </button>
+          <button className={institudeStyle.cancelBtn}>Cancel</button>
+        </div>
+        <button className={institudeStyle.deleteBtn}>
           <span></span>Delete
         </button>
-        <button>Cancel</button>
-        <button type="submit">Save</button>
       </form>
     </section>
   );
