@@ -1,0 +1,24 @@
+.educationForms{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.educationText{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.educationText > span {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.addEducationBtn{
+    background: white;
+    border: 4px solid #eef0f4;
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    max-width: fit-content;
+}
