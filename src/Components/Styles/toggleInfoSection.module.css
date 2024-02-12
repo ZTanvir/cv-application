@@ -1,0 +1,10 @@
+.sectionDetails{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.sectionDetails > span {
+    display: flex;
+    gap: 0.25rem;
+}
