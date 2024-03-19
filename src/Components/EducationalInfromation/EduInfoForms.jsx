@@ -1,7 +1,7 @@
 import InstituteInfo from "./InstituteInfo";
 import eduInfoFormStyle from "../Styles/EduInfoStyle/eduInfoForm.module.css";
 import ToggleInfoSection from "../ToggleInfoSection";
-import ToggleButton from "../ToggleButton";
+import AddInfoButton from "../AddInfoButton";
 import { useState } from "react";
 
 const EduInfoForms = () => {
@@ -14,9 +14,16 @@ const EduInfoForms = () => {
   return (
     <section className={eduInfoFormStyle.educationForms}>
       <ToggleInfoSection icon="school" sectionName="Education">
-        <ToggleButton buttonName="Education" addInfoBtnOnlick={handleEducation}>
-          {toggleInstituteInfo ? <InstituteInfo /> : null}
-        </ToggleButton>
+        <section className={eduInfoFormStyle.oldInformation}>
+          <p>London university</p>
+        </section>
+        <AddInfoButton
+          buttonName="Education"
+          addInfoBtnOnlick={handleEducation}
+        />
+        <div className={eduInfoFormStyle}>
+          <InstituteInfo />
+        </div>
       </ToggleInfoSection>
     </section>
   );
