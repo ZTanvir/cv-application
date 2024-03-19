@@ -5,24 +5,46 @@ import AddInfoButton from "../AddInfoButton";
 import { useState } from "react";
 
 const EduInfoForms = () => {
-  const [toggleInstituteInfo, setToggleInstituteInfo] = useState(false);
+  const [toggleSection, setToggleSection] = useState(false);
 
   const handleEducation = (event) => {
-    setToggleInstituteInfo(!toggleInstituteInfo);
+    setToggleSection(!toggleSection);
+  };
+
+  const handleSubmitClick = (event) => {
+    event.preventDefault();
+  };
+
+  const handleCancelClick = (event) => {
+    setToggleSection(!toggleSection);
   };
 
   return (
     <section className={eduInfoFormStyle.educationForms}>
       <ToggleInfoSection icon="school" sectionName="Education">
-        <section className={eduInfoFormStyle.oldInformation}>
-          <p>London university</p>
+        <section
+          className={`${eduInfoFormStyle.informationSection} ${
+            toggleSection ? eduInfoFormStyle.toggleInfo : null
+          } `}
+        >
+          <section className={eduInfoFormStyle.oldInformation}>
+            <p>London university</p>
+          </section>
+          <AddInfoButton
+            buttonName="Education"
+            addInfoBtnOnlick={handleEducation}
+          />
         </section>
-        <AddInfoButton
-          buttonName="Education"
-          addInfoBtnOnlick={handleEducation}
-        />
-        <div className={eduInfoFormStyle}>
-          <InstituteInfo />
+
+        <div
+          className={`${eduInfoFormStyle.addInfoForm} ${
+            toggleSection ? null : eduInfoFormStyle.toggleInfo
+          }`}
+        >
+          <InstituteInfo
+            onSubmitForm={handleSubmitClick}
+            onclickCancel={handleCancelClick}
+          />
         </div>
       </ToggleInfoSection>
     </section>

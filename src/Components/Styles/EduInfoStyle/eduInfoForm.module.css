@@ -12,3 +12,6 @@
     cursor: pointer;
     max-width: fit-content;
 }
+.toggleInfo{
+    display: none;
+}

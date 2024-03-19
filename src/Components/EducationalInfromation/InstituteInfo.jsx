@@ -1,10 +1,10 @@
 import InputField from "../InputField";
 import institudeStyle from "../Styles/EduInfoStyle/institudeInfo.module.css";
 
-const InstituteInfo = () => {
+const InstituteInfo = ({ onSubmitForm, onclickCancel }) => {
   return (
     <section className={institudeStyle.institudeInfo}>
-      <form>
+      <form onSubmit={onSubmitForm}>
         <InputField lableName="School" inputType="text" />
         <InputField lableName="Degree" inputType="text" />
         <InputField lableName="Start Date" inputType="date" />
@@ -13,7 +13,9 @@ const InstituteInfo = () => {
           <button className={institudeStyle.saveBtn} type="submit">
             Save
           </button>
-          <button className={institudeStyle.cancelBtn}>Cancel</button>
+          <button onClick={onclickCancel} className={institudeStyle.cancelBtn}>
+            Cancel
+          </button>
         </div>
         <button className={institudeStyle.deleteBtn}>
           <span className="material-symbols-outlined">delete</span>Delete
