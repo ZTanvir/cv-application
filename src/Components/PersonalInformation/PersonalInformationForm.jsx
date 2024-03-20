@@ -4,9 +4,21 @@ const PersonalInformationForm = () => {
   return (
     <section className="">
       <h3>Personal Details</h3>
-      <InputField lableName="Full Name" type="text" />
-      <InputField lableName="Profession" type="text" />
-      <InputField lableName="Description" type="text" />
+      <InputField
+        lableName="Full Name"
+        placeholder="First and last name"
+        type="text"
+      />
+      <InputField
+        lableName="Profession"
+        placeholder="Enter email"
+        type="text"
+      />
+      <InputField
+        lableName="Description"
+        placeholder="Profile description"
+        type="text"
+      />
     </section>
   );
 };

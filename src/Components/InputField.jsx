@@ -1,11 +1,11 @@
 import InputFieldstyle from "../Components/Styles/inputFormStyle.module.css";
 
-const InputField = ({ lableName, inputType }) => {
+const InputField = ({ lableName, inputType, placeholder }) => {
   return (
     <p>
       <label className={InputFieldstyle.InputField}>
         {lableName}
-        <input type={inputType} />
+        <input type={inputType} placeholder={placeholder} />
       </label>
     </p>
   );
