@@ -4,7 +4,8 @@ import ToggleInfoSection from "../ToggleInfoSection";
 import AddInfoButton from "../AddInfoButton";
 import { useState } from "react";
 
-const EduInfoForms = () => {
+const EduInfoForms = ({ userData, updateUserData }) => {
+  console.log({ userData });
   const [toggleSection, setToggleSection] = useState(false);
 
   const handleEducation = (event) => {
@@ -17,6 +18,7 @@ const EduInfoForms = () => {
 
   const handleCancelClick = (event) => {
     setToggleSection(!toggleSection);
+    updateUserData({ ...userData.personal_details, full_name: "sadek" });
   };
 
   return (
@@ -28,7 +30,10 @@ const EduInfoForms = () => {
           } `}
         >
           <section className={eduInfoFormStyle.oldInformation}>
-            <p>London university</p>
+            {JSON.stringify(userData.education)}
+            {userData.education.map((item) => {
+              return <div key={crypto.randomUUID()}>{item.school}</div>;
+            })}
           </section>
           <AddInfoButton
             buttonName="Education"

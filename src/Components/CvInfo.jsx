@@ -1,11 +1,11 @@
 import EduInfoForms from "./EducationalInfromation/EduInfoForms";
 import PersonalInformationForm from "./PersonalInformation/PersonalInformationForm";
 
-const CvInfo = () => {
+const CvInfo = ({ userData, updateUserData }) => {
   return (
     <>
       <PersonalInformationForm />
-      <EduInfoForms />
+      <EduInfoForms userData={userData} updateUserData={updateUserData} />
     </>
   );
 };

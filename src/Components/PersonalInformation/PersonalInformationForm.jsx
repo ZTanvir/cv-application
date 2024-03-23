@@ -11,7 +11,7 @@ const PersonalInformationForm = () => {
       />
       <InputField
         lableName="Profession"
-        placeholder="Enter email"
+        placeholder="Artist? Business? Engineer?"
         type="text"
       />
       <InputField
