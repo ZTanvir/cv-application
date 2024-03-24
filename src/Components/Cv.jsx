@@ -17,6 +17,12 @@ const Cv = () => {
         start_date: "03/23/2024",
         end_date: "07/23/2024",
       },
+      {
+        school: "Dhaka city",
+        degree: "S.S.C",
+        start_date: "02/23/2024",
+        end_date: "01/23/2024",
+      },
     ],
     experience: [{}],
   });

@@ -5,7 +5,6 @@ import AddInfoButton from "../AddInfoButton";
 import { useState } from "react";
 
 const EduInfoForms = ({ userData, updateUserData }) => {
-  console.log({ userData });
   const [toggleSection, setToggleSection] = useState(false);
 
   const handleEducation = (event) => {
@@ -14,11 +13,12 @@ const EduInfoForms = ({ userData, updateUserData }) => {
 
   const handleSubmitClick = (event) => {
     event.preventDefault();
+    console.log("Form submitted");
   };
 
   const handleCancelClick = (event) => {
     setToggleSection(!toggleSection);
-    updateUserData({ ...userData.personal_details, full_name: "sadek" });
+    // updateUserData({ ...userData.personal_details, full_name: "sadek" });
   };
 
   return (
@@ -31,9 +31,17 @@ const EduInfoForms = ({ userData, updateUserData }) => {
         >
           <section className={eduInfoFormStyle.oldInformation}>
             {JSON.stringify(userData.education)}
-            {userData.education.map((item) => {
-              return <div key={crypto.randomUUID()}>{item.school}</div>;
-            })}
+            {userData.education.map((item) => (
+              <div
+                onClick={(e) =>
+                  console.log(e.target.parentNode.firstChild.firstChild)
+                }
+                key={crypto.randomUUID()}
+              >
+                <div>{item.school}</div>
+                <span className="material-symbols-outlined">visibility</span>
+              </div>
+            ))}
           </section>
           <AddInfoButton
             buttonName="Education"

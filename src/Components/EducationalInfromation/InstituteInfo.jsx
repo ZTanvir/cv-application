@@ -9,14 +9,16 @@ const InstituteInfo = ({ onSubmitForm, onclickCancel }) => {
           lableName="School"
           placeholder="Enter school / university"
           inputType="text"
+          isRequired={false}
         />
         <InputField
           lableName="Degree"
           placeholder="Enter Degree / Field of study"
           inputType="text"
+          required
         />
-        <InputField lableName="Start Date" inputType="date" />
-        <InputField lableName="End Date" inputType="date" />
+        <InputField lableName="Start Date" inputType="date" required />
+        <InputField lableName="End Date" inputType="date" required />
         <div className={institudeStyle.saveCancelBtn}>
           <button className={institudeStyle.saveBtn} type="submit">
             Save
