@@ -11,9 +11,14 @@ const EduInfoForms = ({ userData, updateUserData }) => {
     setToggleSection(!toggleSection);
   };
 
-  const handleSubmitClick = (event) => {
-    event.preventDefault();
-    console.log("Form submitted");
+  const handleSubmitClick = (schoolName, degree, startDate, endDate) => {
+    console.log(
+      "Form submitted",
+      schoolName,
+      degree,
+      startDate.split("-").reverse().join("-"),
+      endDate.split("-").reverse().join("-")
+    );
   };
 
   const handleCancelClick = (event) => {
